@@ -1,0 +1,8 @@
+/* src/fonts.css */
+@import url('https://fonts.googleapis.com/css2?family=Krub&family=Open+Sans:wght@300&family=Poppins:wght@700&family=Rubik:wght@600&family=Sora:wght@100..800&display=swap');
+
+/* Apply the font to the body */
+body {
+  font-family: 'Sora', sans-serif;
+  background-color:"black"
+}
