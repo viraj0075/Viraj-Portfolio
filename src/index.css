@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  @apply bg-black;
+  @apply bg-[#0f0c29]
 }
 /* Blinking animation */
 @keyframes blink {
@@ -23,7 +23,7 @@ body {
   white-space: nowrap;
   box-sizing: border-box;
   width: 100%;
-  background: #f0f0f0; /* Adjust background color as needed */
+  background: #0f0c29; /* Adjust background color as needed */
   height: 50px; /* Adjust height as needed */
   display: flex;
   align-items: center;
