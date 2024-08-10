@@ -1,5 +1,5 @@
 export const containerVar = {
-    hidden: { opacity: 0 , y:70},
+    hidden: { opacity: 0 , y:100},
     show: {
         opacity: 1,
         y:0,
@@ -11,10 +11,10 @@ export const containerVar = {
     },
 }
 export const projVar = {
-    hidden: { opacity: 0 , x:70},
+    hidden: { opacity: 0 , y:70},
     show: {
         opacity: 1,
-        x:0,
+        y:0,
         transition: {
             staggerChildren: 0.2,
             ease:"easeOut",
@@ -36,9 +36,9 @@ export const imageVar = {
     },
 }
 export const emoji = {
-    hidden: { y:-10},
+    hidden: { x:-10},
     show: {
-        y:[10,-10],
+        x:[10,-10],
         transition: {
             staggerChildren: 0.2,
             ease:"linear",

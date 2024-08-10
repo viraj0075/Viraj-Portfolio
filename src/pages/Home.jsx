@@ -5,12 +5,13 @@ import { skills } from '../utils/skill/skillimages';
 import { WorkData } from '../utils/work/WorkData';
 import Experience from '../components/Experience';
 import { motion } from 'framer-motion';
-import { containerVar, imageVar, projVar } from '../components/Animations';
+import { containerVar, emoji, imageVar } from '../components/Animations';
 
 const Home = () => {
     return (
         <>
-            <motion.div initial="hidden"
+            <motion.div
+                initial="hidden"
                 animate="show" variants={containerVar} className=' mx-4 sm:mx-2 md:mx-10 mt-20 lg:mx-32 mb-3 flex items-center justify-between flex-wrap'>
                 <div className='container mx-auto flex justify-between flex-wrap'>
                     <motion.div
@@ -72,12 +73,16 @@ const Home = () => {
 
                 </Marquee>
             </div>
-            <div className='mx-8 sm:mx-2 md:mx-10 mt-20 lg:mx-32 flex items-center justify-between flex-wrap'>
+            <motion.div
+                initial="hidden"
+                animate="show"
+                variants={containerVar}
+                className='mx-8 sm:mx-2 md:mx-10 mt-20 lg:mx-32 flex items-center justify-between flex-wrap'>
                 <div className='container mx-auto'>
                     <motion.div
                         whileInView={{ opacity: 1, y: 0 }}
-                        initial={{ opacity: 0, y: 100 }}
-                        transition={{ duration: 1.2, ease: "easeInOut" }}
+                        initial={{ opacity: 0, y: 30 }}
+                        transition={{ duration: 1.2, ease: "easeOut" }}
                         className='flex items-center flex-wrap'>
                         <div>
 
@@ -87,19 +92,14 @@ const Home = () => {
                                 </Link>
                             </h1>
                         </div>
-                        <div>
+                        <motion.div variants={emoji}>
                             <span className='text-4xl'>
                                 👋
-
                             </span>
-                        </div>
+                        </motion.div>
                     </motion.div>
-                    <motion.div
-                        whileInView={{ opacity: 1, y: 0 }}
-                        initial={{ opacity: 0, y: 100 }}
-                        transition={{ duration: 1.2, ease: "easeInOut" }}
-                    >
-                        <div className="flex items-center p-4 mt-[2rem] bg-[#1c0230] rounded-[2rem] shadow-lg">
+                    <div>
+                        <motion.div variants={containerVar} className="flex items-center p-4 mt-[2rem] bg-[#1c0230] rounded-[2rem] shadow-lg">
                             <span className="text-white text-xl lg:text-4xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis adipisci impedit aperiam minus quae mollitia ad ab ratione accusamus itaque excepturi beatae temporibus sequi velit quasi corrupti doloremque, nisi fugiat!
                                 <Link to="/about">
                                     <h1 className='text-green-500 blinking text-xl lg:text-2xl'>
@@ -107,28 +107,34 @@ const Home = () => {
                                     </h1>
                                 </Link>
                             </span>
-                        </div>
-                    </motion.div>
+                        </motion.div>
+                    </div>
                 </div>
-            </div>
+            </motion.div>
             <div className='mx-8 sm:mx-2 md:mx-10 mt-20 lg:mx-32 '>
                 <div className='mt-[4rem] m-8 container mx-auto mb-[4rem]'>
                     <motion.div
-                        whileInView={{ opacity: 1, y: 0 }}
-                        initial={{ opacity: 0, y: 100 }}
-                        transition={{ duration: 1.2, ease: "backIn" }}
+                        initial="hidden"
+                        animate="show" variants={containerVar}
                         className='flex items-center flex-wrap'>
-                        <h1 className='text-white text-2xl mt-8 lg:text-6xl sm:text-[1rem] md:text-[2rem] text-sora ml-3 font-bold'>
+                        <motion.h1
+                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 30 }}
+                            transition={{ duration: 1.2, ease: "easeOut" }}
+                            className='text-white text-2xl mt-8 lg:text-6xl sm:text-[1rem] md:text-[2rem] text-sora ml-3 mb-4 font-bold'>
                             Skills
-                        </h1>
-                        <span className='text-4xl mt-8'>
+                        </motion.h1>
+                        <motion.span whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, x: 30 }}
+                            transition={{ duration: 1.2, ease: "easeOut" }}
+                            className='text-4xl mt-8 mb-4'>
                             😎
-                        </span>
+                        </motion.span>
                     </motion.div>
                     <motion.div
-                        whileInView={{ opacity: 1, y: 0 }}
-                        initial={{ opacity: 0, y: 100 }}
-                        transition={{ duration: 1.2, ease: "backIn" }}
+                        initial="hidden"
+                        animate="show"
+                        variants={containerVar}
                         className='flex flex-row flex-wrap items-center justify-center bg-[#0f0c29]  p-4 overflow-hidden'>
                         <Marquee autoFill velocity={25} minScale={0.7} resetAfterTries={200} scatterRandomly>
                             {skills.map((items) => (
@@ -156,17 +162,20 @@ const Home = () => {
                         <h1 className='text-white text-2xl mt-8 lg:text-6xl sm:text-[1rem] md:text-[2rem] text-sora ml-3 font-bold'>
                             Recent Projects
                         </h1>
-                        <span className='text-4xl mt-8 '>
+                        <motion.span whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, x: 30 }}
+                            transition={{ duration: 1.2, ease: "easeOut" }}
+                            className='text-4xl mt-8 '>
                             😎
-                        </span>
+                        </motion.span>
                     </motion.div>
                     <div className='bg-[#0f0c29] mt-[2rem]  p-4 overflow-hidden'>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {WorkData.map((work) => (work.id <= 4 && (
                                 <motion.div
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    initial={{ opacity: 0, x: 300 }}
-                                    transition={{ duration: 2, ease: "easeOut" }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    initial={{ opacity: 0, y: 300 }}
+                                    transition={{ duration: 1.8, ease: "easeOut" }}
                                     key={work.id}
                                     className="relative bg-[#1c0230] p-4 rounded-lg overflow-hidden"
                                 >
@@ -203,27 +212,46 @@ const Home = () => {
 
 
                 <div className='mt-[4rem] container mx-auto'>
-                    <div className='flex items-center flex-wrap mx-2'>
-                        <h1 className='text-white text-2xl mt-8 lg:text-6xl sm:text-[1rem] md:text-[2rem] text-sora ml-3 font-bold'>
+                    <motion.div
+                        initial="hidden"
+                        animate="show"
+                        variants={containerVar}
+                        className='flex items-center flex-wrap mx-2'>
+                        <motion.h1
+                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 30 }}
+                            transition={{ duration: 1.2, ease: "easeOut" }}
+                            className='text-white text-2xl mt-8 lg:text-6xl sm:text-[1rem] md:text-[2rem] text-sora ml-3 font-bold'>
                             Experience
-                        </h1>
-                        <span className='text-4xl mt-8 '>
+                        </motion.h1>
+                        <motion.span
+                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, x: 30 }}
+                            transition={{ duration: 1.2, ease: "easeOut" }}
+
+                            className='text-4xl mt-8 '>
                             😎
-                        </span>
-                    </div>
+                        </motion.span>
+                    </motion.div>
                     <div className='bg-[#0f0c29] mt-[2rem]  p-4 overflow-hidden'>
                         <Experience />
                     </div>
                 </div>
                 <div className='mt-[4rem] container mx-auto'>
-                    <div className='flex items-center flex-wrap mx-2'>
-                        <h1 className='text-white text-4xl mt-8 lg:text-6xl sm:text-3xl md:text-4xl text-sora ml-3 font-bold '>
+                    <motion.div initial="hidden"
+                        animate="show" className='flex items-center flex-wrap mx-2'>
+                        <motion.h1 whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 30 }}
+                            transition={{ duration: 1.2, ease: "easeOut" }} className='text-white text-4xl mt-8 lg:text-6xl sm:text-3xl md:text-4xl text-sora ml-3 font-bold '>
                             Socials
-                        </h1>
-                        <span className='text-4xl mt-8 '>
+                        </motion.h1>
+                        <motion.span whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, x: 30 }}
+                            transition={{ duration: 1.2, ease: "easeOut" }}
+                            className='text-4xl mt-8 '>
                             😎
-                        </span>
-                    </div>
+                        </motion.span>
+                    </motion.div>
                 </div>
             </div>
 
