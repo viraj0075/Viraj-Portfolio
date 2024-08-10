@@ -43,28 +43,28 @@ const About = () => {
                     </span>
                 </div>
                 <div className='flex flex-row flex-wrap w-full'>
-                    <div className="p-8 mr-2 mt-[2rem] bg-zinc-800 w-full md:w-[280px] rounded-[2rem] shadow-lg">
+                    <div className="p-8 mr-2 mt-[2rem] bg-[#1c0230] w-full md:w-[280px] rounded-[2rem] shadow-lg">
                         <img className='w-[150px] sm:w-full rounded h-[50px]' src="/city2.jpg" alt="" />
                         <h1 className='text-white text-2xl mt-8  text-sora font-small'>
                             Hello
                         </h1>
                         <span className="text-white text-xl font-small lg:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis adipisci impedit aperiam minus quae mollitia ad ab ratione accusamus itaque excepturi beatae temporibus sequi velit quasi corrupti doloremque, nisi fugiat!</span>
                     </div>
-                    <div className="p-8 mr-2 w-full mt-[2rem] md:w-[280px] bg-zinc-800 rounded-[2rem] shadow-lg">
+                    <div className="p-8 mr-2 w-full mt-[2rem] md:w-[280px] bg-[#1c0230] rounded-[2rem] shadow-lg">
                         <img className='w-[150px] sm:w-full rounded h-[50px]' src="/city2.jpg" alt="" />
                         <h1 className='text-white text-2xl mt-8  text-sora font-small'>
                             Hello
                         </h1>
                         <span className="text-white text-xl font-small lg:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis adipisci impedit aperiam minus quae mollitia ad ab ratione accusamus itaque excepturi beatae temporibus sequi velit quasi corrupti doloremque, nisi fugiat!</span>
                     </div>
-                    <div className="p-8 mr-2 w-full mt-[2rem] md:w-[280px] bg-zinc-800 rounded-[2rem] shadow-lg">
+                    <div className="p-8 mr-2 w-full mt-[2rem] md:w-[280px] bg-[#1c0230] rounded-[2rem] shadow-lg">
                         <img className='w-[150px] sm:w-full rounded h-[50px]' src="/city2.jpg" alt="" />
                         <h1 className='text-white text-2xl mt-8  text-sora font-small'>
                             Hello
                         </h1>
                         <span className="text-white text-xl font-small lg:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis adipisci impedit aperiam minus quae mollitia ad ab ratione accusamus itaque excepturi beatae temporibus sequi velit quasi corrupti doloremque, nisi fugiat!</span>
                     </div>
-                    <div className="p-8 mr-2 w-full mt-[2rem] md:w-[280px] bg-zinc-800 rounded-[2rem] shadow-lg">
+                    <div className="p-8 mr-2 w-full mt-[2rem] md:w-[280px] bg-[#1c0230] rounded-[2rem] shadow-lg">
                         <img className='w-[150px] sm:w-full rounded h-[50px]' src="/city2.jpg" alt="" />
                         <h1 className='text-white text-2xl mt-8  text-sora font-small'>
                             Hello
@@ -83,7 +83,7 @@ const About = () => {
                             😎
                         </span>
                     </div>
-                    <div className='flex flex-row flex-wrap items-center justify-center bg-black  p-4 overflow-hidden'>
+                    <div className='flex flex-row flex-wrap items-center justify-center bg-[#0f0c29]  p-4 overflow-hidden'>
                         <Marquee autoFill velocity={25} minScale={0.7} resetAfterTries={200} scatterRandomly>
                             {skills.map((items) => (
                                 <div className='w-[300px] flex-col items-center justify-center flex overflow-hidden m-2' key={items.id}>

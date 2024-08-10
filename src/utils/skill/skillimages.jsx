@@ -2,7 +2,7 @@ export const skills = [
     { id: 43, skillname: "MongoDB", imageUrl: "/skills/mongoDB.svg" },
     { id: 35, skillname: "Express JS", imageUrl: "/skills/expressjs.png" },
     { id: 57, skillname: "React JS", imageUrl: "/skills/react.svg" },
-    { id: 8, skillname : "Node", imageUrl: "/skills/nodejs.png" },
+    { id: 8, skillname : "Node JS", imageUrl: "/skills/nodejs.png" },
     { id: 34, skillname: "JavaScript", imageUrl: "/skills/javascript.svg" },
     { id: 13, skillname: "C++", imageUrl: "/skills/cplusplus.svg" },
     { id: 64, skillname: "Tailwind Css", imageUrl: "/skills/tailwind.svg" },

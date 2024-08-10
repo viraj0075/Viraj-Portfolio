@@ -1,0 +1,58 @@
+export const projectData = [{
+    id:1,
+    heading:"Project-1",
+    tags:{
+        tag1:"About",
+        date:"2024"
+    },
+    description:"lsadjfghasj;ldfhgjsdfhgkjldhfj",
+    photo:{
+        image1:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE6i74kRqd0DtrVseio2yxnV1xOTR1qNI2UQ&s",
+        image2:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmT_1Qkz206eF1Wp7zcFXng--Rp6eAj4WYQA&s"
+    },
+    conclusion:"ksjahgklhdflgjhskldfghlkjdfhklgjhd"
+},
+{
+    id:2,
+    heading:"Project-1",
+    tags:{
+        tag1:"About",
+        date:"2024"
+    },
+    description:"lsadjfghasj;ldfhgjsdfhgkjldhfj",
+    photo:{
+        image1:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE6i74kRqd0DtrVseio2yxnV1xOTR1qNI2UQ&s",
+        image2:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmT_1Qkz206eF1Wp7zcFXng--Rp6eAj4WYQA&s"
+    },
+    conclusion:"ksjahgklhdflgjhskldfghlkjdfhklgjhd"
+},
+{
+    id:3,
+    heading:"Project-1",
+    tags:{
+        tag1:"About",
+        date:"2024"
+    },
+    description:"lsadjfghasj;ldfhgjsdfhgkjldhfj",
+    photo:{
+        image1:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE6i74kRqd0DtrVseio2yxnV1xOTR1qNI2UQ&s",
+        image2:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmT_1Qkz206eF1Wp7zcFXng--Rp6eAj4WYQA&s"
+    },
+    conclusion:"ksjahgklhdflgjhskldfghlkjdfhklgjhd"
+},
+{
+    id:4,
+    heading:"Project-1",
+    tags:{
+        tag1:"About",
+        date:"2024"
+    },
+    description:"lsadjfghasj;ldfhgjsdfhgkjldhfj",
+    photo:{
+        image1:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE6i74kRqd0DtrVseio2yxnV1xOTR1qNI2UQ&s",
+        image2:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmT_1Qkz206eF1Wp7zcFXng--Rp6eAj4WYQA&s"
+    },
+    conclusion:"ksjahgklhdflgjhskldfghlkjdfhklgjhd"
+}
+
+]

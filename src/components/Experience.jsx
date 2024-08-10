@@ -10,12 +10,12 @@ const Experience = () => {
   };
 
   return (
-    <div className=" bg-black text-white">
+    <div className=" bg-[#0f0c29] text-white">
     <div className="space-y-2 sm:space-y-4">
       {ExpData.map((item, index) => (
         <div key={item.id}>
           <div
-            className="flex ml-2 flex-col md:flex-row items-start md:items-start justify-start p-4 flex-wrap bg-gray-800 rounded-lg cursor-pointer"
+            className="flex ml-2 flex-col md:flex-row items-start md:items-start justify-start p-4 flex-wrap bg-[#1c0230] rounded-lg cursor-pointer"
             onClick={() => toggleAccordion(index)}
           >
             <div className="flex items-start space-x-2 sm:space-x-4 w-full flex-wrap">
@@ -47,7 +47,7 @@ const Experience = () => {
             </div>
           </div>
           {activeIndex === index && (
-            <div className="p-4 bg-gray-900 rounded-lg mt-2">
+            <div className="p-4 bg-[#17033b] rounded-lg mt-2">
               <p>{item.details}</p>
             </div>
           )}
