@@ -77,13 +77,13 @@ const Projects = () => {
                         </div>
                         <div>
                             <div>
-                                <motion.h1 variants={projVar}
+                                <motion.h1 
                                     whileInView={{ opacity: 1, y: 0 }}
                                     initial={{ opacity: 0, y: 30 }}
                                     transition={{ duration: 1.2, ease: "easeOut" }} className='text-white text-2xl mt-8 lg:text-4xl sm:text-2xl md:text-3xl text-sora ml-2 lg:mx-[5rem] font-bold font-sora'>Conclusion</motion.h1>
                             </div>
                             <div>
-                                <motion.div variants={projVar}
+                                <motion.div
                                     whileInView={{ opacity: 1, y: 0 }}
                                     initial={{ opacity: 0, y: 30 }}
                                     transition={{ duration: 1.2, ease: "easeOut" }}

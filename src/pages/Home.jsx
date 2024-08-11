@@ -6,31 +6,40 @@ import { WorkData } from '../utils/work/WorkData';
 import Experience from '../components/Experience';
 import { motion } from 'framer-motion';
 import { containerVar, emoji, imageVar } from '../components/Animations';
+import '../../src/index.css'
 
 const Home = () => {
     return (
         <>
             <motion.div
                 initial="hidden"
-                animate="show" variants={containerVar} className=' mx-4 sm:mx-2 md:mx-10 mt-20 lg:mx-32 mb-3 flex items-center justify-between flex-wrap'>
-                <div className='container mx-auto flex justify-between flex-wrap'>
+                animate="show" variants={containerVar} className=' mx-4 sm:mx-2 md:mx-10 mt-32 lg:mx-32 mb-3 flex items-center justify-between flex-wrap'>
+                <div className='container mx-auto flex items-center justify-center flex-wrap'>
                     <motion.div
                         variants={containerVar}
+                        className='flex flex-col items-center justify-center'
                     >
-                        <motion.div variants={containerVar} className='w-[212px]'>
-                            <div className="flex items-center p-4 bg-[#300351] rounded-full shadow-lg">
+                        {/* <motion.div variants={containerVar} className='w-[212px]'>
+                            <div className="flex items-center justify-center  p-4 bg-[#300351] rounded-full shadow-lg">
                                 <span className=" blinking w-3 h-3 bg-green-500 rounded-full mx-2"></span>
                                 <span className="text-white">Available for hire</span>
                             </div>
-                        </motion.div>
-                        <div className='mt-3 ml-2'>
-                            <motion.div variants={containerVar} className='text-white' >
-                                <motion.span className='text-3xl  sm:text-3xl md:text-4xl lg:text-6xl font-sora font-bold pt-2'>Hi, I’m VIRAJ,</motion.span><br />
-                                <motion.span className='text-3xl  sm:text-3xl md:text-4xl lg:text-6xl font-sora font-bold pt-2'>a Software
+                        </motion.div> */}
+                        <div className='ml-2'>
+                            <div className='text-white text-center' >
+                                <motion.span
+                                    whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 100 }} transition={{ duration: 1.2, ease: "easeOut" }}
+                                    className='text-3xl  sm:text-xl md:text-4xl lg:text-5xl font-sora font-bold pt-2 '>Hi, I’m </motion.span><br />
+                                <motion.span
+                                    whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 100 }} transition={{ duration: 1.2, ease: "easeOut" }}
+                                    className='text-5xl  sm:text-3xl md:text-4xl lg:text-6xl font-sora font-extrabold pt-2 gradient-text animate-gradient '>Viraj Koradia,</motion.span><br />
+                                <motion.span whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 100 }} transition={{ duration: 1.2, ease: "easeOut" }}
+                                    className='text-4xl  sm:text-3xl md:text-4xl lg:text-5xl font-sora font-bold pt-2'>a Software
                                     Developer</motion.span><br />
-                                <motion.span className='text-3xl  sm:text-3xl md:text-4xl lg:text-6xl font-sora font-bold pt-2'>from India.</motion.span>
-                            </motion.div>
-                            <motion.div variants={containerVar} className='text-gray-400 pt-8' >
+                                <motion.span
+                                    whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 100 }} transition={{ duration: 1.2, ease: "easeOut" }} className='text-4xl  sm:text-3xl md:text-4xl lg:text-5xl font-sora font-bold pt-2'>from India.</motion.span>
+                            </div>
+                            <motion.div variants={containerVar} className='text-gray-400 pt-8 text-center' >
                                 <span className='text-xl  sm:text-2xl md:text-2xl lg:text-2xl font-sans font-sm mt-2'>With a background in industrial design and a keen eye </span><br />
                                 <span className='text-xl  sm:text-2xl md:text-2xl lg:text-2xl font-sans font-sm mt-2'>a Softwarefor detail, I excel at transforming concepts into </span><br />
                                 <span className='text-xl  sm:text-2xl md:text-2xl lg:text-2xl font-sans font-sm mt-2'>tangible realities by seamlessly integrating aesthetics  </span><br />
@@ -38,9 +47,7 @@ const Home = () => {
                             </motion.div>
                         </div>
                     </motion.div>
-                    <motion.div variants={imageVar} className='mt-8'>
-                        <img className='w-[350px] h-[300px] sm:w-[400px] sm:h-[350px] lg:w-[450px] lg:h-[400px] border-b-orange-500 rounded-[4rem] object-cover bg-center' src={"/Viraj (1).jpg"} alt="" />
-                    </motion.div>
+
                 </div>
             </motion.div >
             <div className="mt-[8rem]">
@@ -77,37 +84,45 @@ const Home = () => {
                 initial="hidden"
                 animate="show"
                 variants={containerVar}
-                className='mx-8 sm:mx-2 md:mx-10 mt-20 lg:mx-32 flex items-center justify-between flex-wrap'>
-                <div className='container mx-auto'>
-                    <motion.div
-                        whileInView={{ opacity: 1, y: 0 }}
-                        initial={{ opacity: 0, y: 30 }}
-                        transition={{ duration: 1.2, ease: "easeOut" }}
-                        className='flex items-center flex-wrap'>
-                        <div>
+                className='mx-8 sm:mx-2 md:mx-10 mt-20 lg:mx-32 flex items-center justify-center flex-wrap'>
+                <div className='container mx-auto flex flex-wrap'>
+                    <div className='flex flex-wrap flex-col justify-between'>
+                        <motion.div
+                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 30 }}
+                            transition={{ duration: 1.2, ease: "easeOut" }}
+                            className='flex items-center flex-wrap'>
+                            <div>
 
-                            <h1 className='text-white text-2xl mt-8 lg:text-6xl sm:text-[1rem] md:text-[2rem] text-sora ml-3 font-bold'>
-                                <Link to="/about">
-                                    About me
-                                </Link>
-                            </h1>
-                        </div>
-                        <motion.div variants={emoji}>
-                            <span className='text-4xl'>
-                                👋
-                            </span>
+                                <h1 className='text-white text-2xl mt-8 lg:text-6xl sm:text-[1rem] md:text-[2rem] text-sora ml-3 font-bold'>
+                                    <Link to="/about">
+                                        About me
+                                    </Link>
+                                </h1>
+                            </div>
+                            <motion.div variants={emoji}>
+                                <span className='text-4xl'>
+                                    👋
+                                </span>
+                            </motion.div>
+
+
                         </motion.div>
-                    </motion.div>
-                    <div>
-                        <motion.div variants={containerVar} className="flex items-center p-4 mt-[2rem] bg-[#1c0230] rounded-[2rem] shadow-lg">
-                            <span className="text-white text-xl lg:text-4xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis adipisci impedit aperiam minus quae mollitia ad ab ratione accusamus itaque excepturi beatae temporibus sequi velit quasi corrupti doloremque, nisi fugiat!
+
+                        <motion.div variants={containerVar} className="flex  p-4 mt-[2rem] bg-[#1c0230] rounded-[2rem] shadow-lg">
+                            <div className="text-white  text-xl lg:text-3xl md:w-[600px] lg:w-[700px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis adipisci impedit aperiam minus quae mollitia ad ab ratione accusamus itaque excepturi beatae temporibus sequi velit quasi corrupti doloremque, nisi fugiat!
                                 <Link to="/about">
                                     <h1 className='text-green-500 blinking text-xl lg:text-2xl'>
                                         Know More....
                                     </h1>
                                 </Link>
-                            </span>
+                            </div>
                         </motion.div>
+                    </div>
+                    <div>
+                    <motion.div variants={imageVar} className='lg:'>
+                        <img className='w-[400px] h-[300px] sm:w-[400px] sm:h-[350px] lg:w-[450px] lg:h-[400px] border-b-orange-500 rounded-[4rem] object-cover bg-center' src={"/Viraj (1).jpg"} alt="" />
+                    </motion.div>
                     </div>
                 </div>
             </motion.div>
@@ -182,10 +197,10 @@ const Home = () => {
                                     <img
                                         src={work.imageUrl}
                                         alt={work.title}
-                                        className="w-full h-[25rem] object-cover rounded-lg"
+                                        className="w-full h-[15rem] md:h-[25rem] lg:h-[25rem] object-cover rounded-lg"
 
                                     />
-                                    <h3 className="text-3xl text-white font-sora font-bold mt-4">{work.title}</h3>
+                                    <h3 className="text-white text-2xl lg:text-3xl sm:text-[1rem] md:text-[2rem] text-sora mt-2 font-bold">{work.title}</h3>
                                     <p className="text-gray-300 text-2xl font-mono">{work.category}</p>
                                     <div className="absolute top-4 right-4 blinking-2 text-green-400">
                                         <svg

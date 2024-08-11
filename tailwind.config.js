@@ -5,10 +5,20 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      fontFamily:{
-        sora:['Sora','sans-serif']
+    keyframes: {
+      gradient: {
+        '0%, 100%': {
+          'background-size': '200% 200%',
+          'background-position': 'left center',
+        },
+        '70%': {
+          'background-size': '200% 200%',
+          'background-position': 'right center',
+        },
       },
+    },
+    animation: {
+      gradient: 'gradient 4s ease infinite',
     },
   },
   plugins: [],
