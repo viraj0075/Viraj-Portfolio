@@ -20,21 +20,38 @@ const About = () => {
                             </Link>
                         </h1>
                         <span className='text-4xl'>
-                            👋
+                            <img className="w-[60px]" src="/gifs/wave.gif" alt="" />
                         </span>
                     </motion.div>
                     <motion.h1
                         whileInView={{ opacity: 1, x: 0 }}
                         initial={{ opacity: 0, x: 100 }}
                         transition={{ duration: 1.2, ease: "easeOut" }} className='text-xl mx-3 text-gray-400 sm:text-2xl md:text-2xl lg:text-2xl font-mono font-sm mt-2'>
-                        I’m a designer from Ireland <br />🇮🇪 with a passion for pixels.
+                        I’m a Software Developer from India <br />🇮🇪 with a passion for Code and Building Software.
                     </motion.h1>
+                    <img className="w-[60px]" src="/gifs/snow.gif" alt="" />
                     <motion.h1
                         whileInView={{ opacity: 1, x: 0 }}
                         initial={{ opacity: 0, x: 100 }}
                         transition={{ duration: 1.2, ease: "easeOut" }}
                         className='text-xl mx-3 text-gray-400 sm:text-2xl md:text-2xl lg:text-2xl font-sans font-sm mt-2'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />Nobis adipisci imp itaque excepturi beatae temporibus<br /> sequi velit quasi corrupti doloremque, nisi fugiat! </motion.h1>
+
+
+                        ⚡I have a strong background in building dynamic web applications, <br />with a focus on performance optimization and responsive design. <br />My passion for coding drives me to continuously explore new <br />technologies and improve my skill set. Whether it's developing <br /> an intuitive front-end interface or crafting a robust back-end <br /> infrastructure, I strive to deliver high-quality, maintainable <br />code.<br />
+
+                    </motion.h1>
+                    <img className="w-[60px]" src="/gifs/snow.gif" alt="" />
+
+                    <motion.h1
+                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, x: 100 }}
+                        transition={{ duration: 1.2, ease: "easeOut" }}
+                        className='text-xl mx-3 text-gray-400 sm:text-2xl md:text-2xl lg:text-2xl font-sans font-sm mt-2'>
+
+
+                        ⚡ In addition to my technical skills, I place a high value on <br />clear communication and teamwork. I believe that the best <br />solutions come from understanding user needs and working together<br /> to meet those needs effectively. My goal is to contribute to <br />projects that make a positive impact, and I'm always eager to take<br /> on new challenges and collaborate with like-minded professionals.
+
+                    </motion.h1>
                 </div>
                 <div className='flex items-center mt-[2rem] flex-wrap'>
                     <motion.img
@@ -65,7 +82,7 @@ const About = () => {
                         </Link>
                     </h1>
                     <span className='text-4xl mt-8'>
-                        😎
+                        <img className="w-[60px]" src="/gifs/cool.gif" alt="" />
                     </span>
                 </motion.div>
                 <div className='flex flex-row flex-wrap w-full'>
@@ -73,50 +90,51 @@ const About = () => {
                         initial={{ opacity: 0, x: 100 }}
                         transition={{ duration: 1.2, ease: "easeOut" }} className="lg:p-8 p-4 mr-2 mt-[2rem] bg-[#1c0230] w-full md:w-[280px] rounded-[2rem] shadow-lg">
                         <img className='object-cover w-[150px] sm:w-full rounded h-[50px]' src="/city2.jpg" alt="" />
-                        <h1 className='text-white text-2xl mt-8  text-sora font-small'>
-                            Hello
+                        <h1 className='text-white text-3xl  mt-8 mb-8  text-sora font-small'>
+                            Requirements
                         </h1>
-                        <span className="text-white text-xl font-small lg:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis adipisci impedit aperiam minus quae mollitia ad ab ratione accusamus itaque excepturi beatae temporibus sequi velit quasi corrupti doloremque, nisi fugiat!</span>
+                        <span className="text-gray-400 text-xl font-small lg:text-xl"> I begin by thoroughly understanding the project requirements and objectives. This involves close communication with stakeholders to gather detailed insights into their needs and expectations.</span>
                     </motion.div>
                     <motion.div whileInView={{ opacity: 1, x: 0 }}
                         initial={{ opacity: 0, x: 100 }}
                         transition={{ duration: 1.2, ease: "easeOut" }} className="lg:p-8 p-4 mr-2 mt-[2rem] bg-[#1c0230] w-full md:w-[280px] rounded-[2rem] shadow-lg">
                         <img className='object-cover w-[150px] sm:w-full rounded h-[50px]' src="/city2.jpg" alt="" />
-                        <h1 className='text-white text-2xl mt-8  text-sora font-small'>
-                            Hello
+                        <h1 className='text-white text-3xl  mt-8 mb-8  text-sora font-small'>
+                            Design
                         </h1>
-                        <span className="text-white text-xl font-small lg:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis adipisci impedit aperiam minus quae mollitia ad ab ratione accusamus itaque excepturi beatae temporibus sequi velit quasi corrupti doloremque, nisi fugiat!</span>
+                        <span className="text-gray-400 text-xl font-small lg:text-xl"> Next, I create a comprehensive plan and design for the project. This includes outlining the project architecture, selecting appropriate technologies, and designing user interfaces that are intuitive and engaging.</span>
                     </motion.div>
                     <motion.div whileInView={{ opacity: 1, x: 0 }}
                         initial={{ opacity: 0, x: 100 }}
                         transition={{ duration: 1.2, ease: "easeOut" }} className="lg:p-8 p-4 mr-2 mt-[2rem] bg-[#1c0230] w-full md:w-[280px] rounded-[2rem] shadow-lg">
                         <img className='object-cover w-[150px] sm:w-full rounded h-[50px]' src="/city2.jpg" alt="" />
-                        <h1 className='text-white text-2xl mt-8  text-sora font-small'>
-                            Hello
+                        <h1 className='text-white text-3xl  mt-8 mb-8  text-sora font-small'>
+                            Development
                         </h1>
-                        <span className="text-white text-xl font-small lg:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis adipisci impedit aperiam minus quae mollitia ad ab ratione accusamus itaque excepturi beatae temporibus sequi velit quasi corrupti doloremque, nisi fugiat!</span>
+                        <span className="text-gray-400 text-xl font-small lg:text-xl"> With a solid plan in place, I proceed to the development phase. I write clean, efficient, and scalable code, ensuring that each component is well-structured and maintainable. I leverage my expertise in frameworks like React, Express.js, and Node.js to build robust applications.</span>
                     </motion.div>
                     <motion.div whileInView={{ opacity: 1, x: 0 }}
                         initial={{ opacity: 0, x: 100 }}
                         transition={{ duration: 1.2, ease: "easeOut" }} className="lg:p-8 p-4 mr-2 mt-[2rem] bg-[#1c0230] w-full md:w-[280px] rounded-[2rem] shadow-lg">
                         <img className='object-cover w-[150px] sm:w-full rounded h-[50px]' src="/city2.jpg" alt="" />
-                        <h1 className='text-white text-2xl mt-8  text-sora font-small'>
-                            Hello
+                        <h1 className='text-white text-3xl  mt-8 mb-8  text-sora font-small'>
+                            Deployment
                         </h1>
-                        <span className="text-white text-xl font-small lg:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis adipisci impedit aperiam minus quae mollitia ad ab ratione accusamus itaque excepturi beatae temporibus sequi velit quasi corrupti doloremque, nisi fugiat!</span>
+                        <span className="text-gray-400 text-xl font-small lg:text-xl">  Once the software is tested and approved, I manage the deployment process, ensuring a smooth transition to production. I also provide ongoing maintenance and support to address any issues that arise and to implement improvements based on user feedback.</span>
                     </motion.div>
                 </div>
                 <div className='mt-[4rem] m-8'>
                     <motion.div whileInView={{ opacity: 1, x: 0 }}
                         initial={{ opacity: 0, x: 100 }}
-                        transition={{ duration: 1.2, ease: "easeOut" }}className='flex items-center'>
+                        transition={{ duration: 1.2, ease: "easeOut" }} className='flex items-center'>
                         <h1 className='text-white text-2xl mt-8 lg:text-6xl sm:text-[1rem] md:text-[2rem] text-sora ml-3 font-bold'>
                             <Link to="/about">
                                 <span>Skills</span>
                             </Link>
                         </h1>
                         <span className='text-4xl mt-8'>
-                            😎
+                            <img className="w-[60px]" src="/gifs/shock.gif" alt="" />
+
                         </span>
                     </motion.div>
                     <div className='flex flex-row flex-wrap items-center justify-center bg-[#0f0c29] p-1 lg:p-4 overflow-hidden'>

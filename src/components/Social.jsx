@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaTwitter, FaInstagram, FaDribbble, FaBehance } from 'react-icons/fa';
+import { FaTwitter, FaInstagram,  FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiArrowRight } from 'react-icons/hi';
 import { motion } from "framer-motion";
 import { containerVar } from './Animations';
@@ -36,14 +36,14 @@ const Social = () => {
             initial={{ opacity: 0, y: 50 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="p-8 bg-[#1c0230] rounded-lg">
-            <FaDribbble className="text-pink-400 w-8   h-8" />
+            <FaLinkedin className="text-pink-400 w-8   h-8" />
           </motion.div>
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 60 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="p-8 bg-[#1c0230] rounded-lg">
-            <FaBehance className="text-blue-400 w-8  h-8" />
+            <FaGithub className="text-blue-400 w-8  h-8" />
           </motion.div>
         </div>
 

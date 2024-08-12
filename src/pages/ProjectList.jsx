@@ -16,7 +16,8 @@ const ProjectList = () => {
                         All Projects
                     </h1>
                     <span className='text-4xl mt-8 '>
-                        😎
+                    <img className="w-[60px]" src="/gifs/cnleaf.gif" alt="" />
+
                     </span>
                 </motion.div>
                 <div className='bg-[#0f0c29] mt-[2rem] overflow-hidden'>

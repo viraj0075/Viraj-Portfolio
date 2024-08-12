@@ -38,9 +38,13 @@ const ContactForm = () => {
   return (
     <motion.div variants={containerVar} initial="hidden" animate="show" className="mt-20 min-h-screen bg-[#0f0c29] flex items-center justify-center p-5">
       <div className="w-full max-w-2xl mx-auto">
+        <div className='flex justify-center'>
         <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 text-center font-sora">Contact.</h1>
+        <img className="w-[60px] h-[60px]" src="/gifs/yo.gif" alt="" />
+
+        </div>
         <p className="text-gray-400 text-center font-sora mb-4 text-xl lg:text-2xl">Get in touch if you would like to work together.</p>
-        <p className="text-gray-400 text-center font-sora mb-8 text-xl lg:text-2xl">Thanks for stopping by. 🤘</p>
+        <p className="text-gray-400 text-center font-sora mb-8 text-xl lg:text-2xl">Thanks for stopping by.</p>
         <form className="space-y-4" onSubmit={handleSubmit}>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             <input
