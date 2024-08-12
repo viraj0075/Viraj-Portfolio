@@ -5,7 +5,7 @@ import { skills } from '../utils/skill/skillimages';
 import { WorkData } from '../utils/work/WorkData';
 import Experience from '../components/Experience';
 import { motion } from 'framer-motion';
-import { containerVar, emoji, imageVar } from '../components/Animations';
+import { containerVar, emoji, imageVar, itemVar } from '../components/Animations';
 import '../../src/index.css'
 
 const Home = () => {
@@ -21,29 +21,76 @@ const Home = () => {
                     >
                         {/* <motion.div variants={containerVar} className='w-[212px]'>
                             <div className="flex items-center justify-center  p-4 bg-[#300351] rounded-full shadow-lg">
-                                <span className=" blinking w-3 h-3 bg-green-500 rounded-full mx-2"></span>
+                                <span className=" blinking w-3 h-3 bg-purple-500 rounded-full mx-2"></span>
                                 <span className="text-white">Available for hire</span>
                             </div>
                         </motion.div> */}
                         <div className='ml-2'>
-                            <div className='text-white text-center' >
+                            <motion.div
+                                className='text-white text-center'
+                                variants={containerVar}
+
+                            >
                                 <motion.span
-                                    whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 100 }} transition={{ duration: 1.2, ease: "easeOut" }}
-                                    className='text-3xl  sm:text-xl md:text-4xl lg:text-5xl font-sora font-bold pt-2 '>Hi, I’m </motion.span><br />
+                                    variants={itemVar}
+                                    className='text-3xl sm:text-xl md:text-4xl lg:text-5xl font-sora font-bold pt-2'
+                                >
+                                    Hi, I’m
+                                </motion.span>
+                                <br />
                                 <motion.span
-                                    whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 100 }} transition={{ duration: 1.2, ease: "easeOut" }}
-                                    className='text-5xl  sm:text-3xl md:text-4xl lg:text-6xl font-sora font-extrabold pt-2 gradient-text animate-gradient '>Viraj Koradia,</motion.span><br />
-                                <motion.span whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 100 }} transition={{ duration: 1.2, ease: "easeOut" }}
-                                    className='text-4xl  sm:text-3xl md:text-4xl lg:text-5xl font-sora font-bold pt-2'>a Software
-                                    Developer</motion.span><br />
+                                    variants={itemVar}
+                                    className='text-5xl sm:text-3xl md:text-4xl lg:text-6xl font-sora font-extrabold pt-2 gradient-text animate-gradient'
+                                >
+                                    Viraj Koradia,
+                                </motion.span>
+                                <br />
                                 <motion.span
-                                    whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 100 }} transition={{ duration: 1.2, ease: "easeOut" }} className='text-4xl  sm:text-3xl md:text-4xl lg:text-5xl font-sora font-bold pt-2'>from India.</motion.span>
-                            </div>
-                            <motion.div variants={containerVar} className='text-gray-400 pt-8 text-center' >
-                                <span className='text-xl  sm:text-2xl md:text-2xl lg:text-2xl font-sans font-sm mt-2'>With a background in industrial design and a keen eye </span><br />
-                                <span className='text-xl  sm:text-2xl md:text-2xl lg:text-2xl font-sans font-sm mt-2'>a Softwarefor detail, I excel at transforming concepts into </span><br />
-                                <span className='text-xl  sm:text-2xl md:text-2xl lg:text-2xl font-sans font-sm mt-2'>tangible realities by seamlessly integrating aesthetics  </span><br />
-                                <span className='text-xl  sm:text-2xl md:text-2xl lg:text-2xl font-sans font-sm mt-2'>with practical functionality.</span>
+                                    variants={itemVar}
+                                    className='text-4xl sm:text-3xl md:text-4xl lg:text-5xl font-sora font-bold pt-2'
+                                >
+                                    a Software Developer
+                                </motion.span>
+                                <br />
+                                <motion.span
+                                    variants={itemVar}
+                                    className='text-4xl sm:text-3xl md:text-4xl lg:text-5xl font-sora font-bold pt-2'
+                                >
+                                    from India.
+                                </motion.span>
+                            </motion.div>
+                            <motion.div
+                                variants={containerVar}
+                                initial="hidden"
+                                animate="show"
+                                className='text-gray-400 pt-8 text-center'
+                            >
+                                <motion.span
+                                    variants={itemVar}
+                                    className='text-xl sm:text-2xl md:text-2xl lg:text-2xl font-sans font-sm mt-2'
+                                >
+                                    A passionate Full Stack Software Developer                                </motion.span>
+                                <br />
+                                <motion.span
+                                    variants={itemVar}
+                                    className='text-xl sm:text-2xl md:text-2xl lg:text-2xl font-sans font-sm mt-2'
+                                >
+                                    🚀 having an experience of building Web-app
+                                </motion.span>
+                                <br />
+                                <motion.span
+                                    variants={itemVar}
+                                    className='text-xl sm:text-2xl md:text-2xl lg:text-2xl font-sans font-sm mt-2'
+                                >
+                                    with MERN Stack and some other cool
+                                </motion.span>
+                                <br />
+                                <motion.span
+                                    variants={itemVar}
+                                    className='text-xl sm:text-2xl md:text-2xl lg:text-2xl font-sans font-sm mt-2'
+                                >
+                                    libraries and frameworks.
+                                </motion.span>
                             </motion.div>
                         </div>
                     </motion.div>
@@ -53,28 +100,28 @@ const Home = () => {
             <div className="mt-[8rem]">
                 <Marquee direction="left" pauseOnHover className="text-white text-9xl text-sora font-bold overflow-hidden">
                     <div className='flex items-center'>
-                        <span className="w-3 h-3 bg-green-500 rounded-full mx-2"></span>
+                        <span className="w-3 h-3 bg-purple-500 rounded-full mx-2"></span>
 
                         <span>SOFTWARE DEVELOPER</span>
-                        <span className="w-3 h-3 bg-green-500 rounded-full mx-2"></span>
+                        <span className="w-3 h-3 bg-purple-500 rounded-full mx-2"></span>
                         <span>SOFTWARE DEVELOPER</span>
-                        <span className="w-3 h-3 bg-green-500 rounded-full mx-2"></span>
+                        <span className="w-3 h-3 bg-purple-500 rounded-full mx-2"></span>
                         <span>SOFTWARE DEVELOPER</span>
-                        <span className="w-3 h-3 bg-green-500 rounded-full mx-2"></span >
+                        <span className="w-3 h-3 bg-purple-500 rounded-full mx-2"></span >
                         <span>SOFTWARE DEVELOPER</span>
                     </div>
 
                 </Marquee>
                 <Marquee direction="right" pauseOnHover className="text-white text-9xl text-sora font-bold mt-8 overflow-hidden"  >
                     <div className='flex items-center'>
-                        <span className="w-3 h-3 bg-green-500 rounded-full mx-2"></span>
+                        <span className="w-3 h-3 bg-purple-500 rounded-full mx-2"></span>
 
                         <span>FULL STACK DEVELOPER</span>
-                        <div className="w-3 h-3 bg-green-500 rounded-full mx-2"></div>
+                        <div className="w-3 h-3 bg-purple-500 rounded-full mx-2"></div>
                         <span>FULL STACK DEVELOPER</span>
-                        <div className="w-3 h-3 bg-green-500 rounded-full mx-2"></div>
+                        <div className="w-3 h-3 bg-purple-500 rounded-full mx-2"></div>
                         <span>FULL STACK DEVELOPER</span>
-                        <div className="w-3 h-3 bg-green-500 rounded-full mx-2"></div>
+                        <div className="w-3 h-3 bg-purple-500 rounded-full mx-2"></div>
                         <span>FULL STACK DEVELOPER</span>
                     </div>
 
@@ -85,7 +132,7 @@ const Home = () => {
                 animate="show"
                 variants={containerVar}
                 className='mx-8 sm:mx-2 md:mx-10 mt-20 lg:mx-32 flex items-center justify-center flex-wrap'>
-                <div className='container mx-auto flex flex-wrap'>
+                <div className='container mx-auto flex flex-wrap justify-between items-center'>
                     <div className='flex flex-wrap flex-col justify-between'>
                         <motion.div
                             whileInView={{ opacity: 1, y: 0 }}
@@ -100,19 +147,24 @@ const Home = () => {
                                     </Link>
                                 </h1>
                             </div>
-                            <motion.div variants={emoji}>
+                            <div variants={emoji}>
                                 <span className='text-4xl'>
-                                    👋
+                                    <img className="w-[60px]" src="/gifs/wave.gif" alt="" />
                                 </span>
-                            </motion.div>
+                            </div>
 
 
                         </motion.div>
 
                         <motion.div variants={containerVar} className="flex  p-4 mt-[2rem] bg-[#1c0230] rounded-[2rem] shadow-lg">
-                            <div className="text-white  text-xl lg:text-3xl md:w-[600px] lg:w-[700px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis adipisci impedit aperiam minus quae mollitia ad ab ratione accusamus itaque excepturi beatae temporibus sequi velit quasi corrupti doloremque, nisi fugiat!
+                            <div className="text-white font-extralight  text-xl lg:text-3xl md:w-[600px] lg:w-[700px]">
+                                ⚡   I'm a skilled software developer with experience in
+                                JavaScript and TypeScript, and expertise in frameworks like React, Express.js, Mongo Js and Node Js. <br />
+                                ⚡  I'm a quick learner and collaborate closely with teams to
+                                create efficient, scalable, and user-friendly solutions that solve
+                                real-world problems. Let's work together to bring your ideas to life!
                                 <Link to="/about">
-                                    <h1 className='text-green-500 blinking text-xl lg:text-2xl'>
+                                    <h1 className='text-purple-500 blinking text-xl lg:text-2xl'>
                                         Know More....
                                     </h1>
                                 </Link>
@@ -120,9 +172,9 @@ const Home = () => {
                         </motion.div>
                     </div>
                     <div>
-                    <motion.div variants={imageVar} className='lg:'>
-                        <img className='w-[400px] h-[300px] sm:w-[400px] sm:h-[350px] lg:w-[450px] lg:h-[400px] border-b-orange-500 rounded-[4rem] object-cover bg-center' src={"/Viraj (1).jpg"} alt="" />
-                    </motion.div>
+                        <motion.div variants={imageVar} className='lg:'>
+                            <img className='w-[400px] h-[300px] sm:w-[400px] sm:h-[350px] lg:w-[450px] lg:h-[400px] border-b-orange-500 rounded-[4rem] object-cover bg-center' src={"/Viraj (1).jpg"} alt="" />
+                        </motion.div>
                     </div>
                 </div>
             </motion.div>
@@ -143,7 +195,8 @@ const Home = () => {
                             initial={{ opacity: 0, x: 30 }}
                             transition={{ duration: 1.2, ease: "easeOut" }}
                             className='text-4xl mt-8 mb-4'>
-                            😎
+                            <img className="w-[60px]" src="/gifs/shock.gif" alt="" />
+
                         </motion.span>
                     </motion.div>
                     <motion.div
@@ -181,7 +234,8 @@ const Home = () => {
                             initial={{ opacity: 0, x: 30 }}
                             transition={{ duration: 1.2, ease: "easeOut" }}
                             className='text-4xl mt-8 '>
-                            😎
+                                                <img className="w-[60px]" src="/gifs/light.gif" alt="" />
+
                         </motion.span>
                     </motion.div>
                     <div className='bg-[#0f0c29] mt-[2rem]  p-4 overflow-hidden'>
@@ -202,13 +256,13 @@ const Home = () => {
                                     />
                                     <h3 className="text-white text-2xl lg:text-3xl sm:text-[1rem] md:text-[2rem] text-sora mt-2 font-bold">{work.title}</h3>
                                     <p className="text-gray-300 text-2xl font-mono">{work.category}</p>
-                                    <div className="absolute top-4 right-4 blinking-2 text-green-400">
+                                    <div className="absolute top-4 right-4 blinking-2 text-purple-400">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
-                                            className="w-12 h-12 text-green-500 bg-[#1c0230] transition-transform duration-300 transform hover:scale-125"
+                                            className="w-12 h-12 text-purple-500 bg-[#1c0230] transition-transform duration-300 transform hover:scale-125"
                                         >
                                             <path
                                                 className="transition-all duration-300"
@@ -245,7 +299,8 @@ const Home = () => {
                             transition={{ duration: 1.2, ease: "easeOut" }}
 
                             className='text-4xl mt-8 '>
-                            😎
+                                                <img className="w-[60px]" src="/gifs/exp.gif" alt="" />
+
                         </motion.span>
                     </motion.div>
                     <div className='bg-[#0f0c29] mt-[2rem]  p-4 overflow-hidden'>
@@ -264,7 +319,8 @@ const Home = () => {
                             initial={{ opacity: 0, x: 30 }}
                             transition={{ duration: 1.2, ease: "easeOut" }}
                             className='text-4xl mt-8 '>
-                            😎
+                                                <img className="w-[60px]" src="/gifs/shame.gif" alt="" />
+
                         </motion.span>
                     </motion.div>
                 </div>
