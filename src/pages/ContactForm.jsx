@@ -17,27 +17,30 @@ const ContactForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSending(true);
 
-    sendEmail(formData)
-      .then(data => {
-        if (!data.ok) {
-          setSuccess(false);
-          throw new Error('Error in Sending Data');
-        } else {
-          setSuccess(true);
-          setFormData({
-            name: '',
-            email: '',
-            message: ''
-          });
-        }
-      })
-      .finally(() => {
-        setIsSending(false);
-      });
+    try {
+      const data = await sendEmail(formData);
+      console.log(data)
+
+      if (!data.text) {
+        setSuccess(false);
+        throw new Error('Error in sending data');
+      } else {
+        setSuccess(true);
+        setFormData({
+          name: '',
+          email: '',
+          message: '',
+        });
+      }
+    } catch (error) {
+      console.error(error.message);
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (

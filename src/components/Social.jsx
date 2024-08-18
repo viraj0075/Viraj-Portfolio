@@ -1,8 +1,9 @@
 import React from 'react';
-import { FaTwitter, FaInstagram,  FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaTwitter, FaInstagram,  FaGithub, FaLinkedin, FaMedium } from 'react-icons/fa';
 import { HiArrowRight } from 'react-icons/hi';
 import { motion } from "framer-motion";
 import { containerVar } from './Animations';
+import { Link } from 'react-router-dom';
 
 const Social = () => {
   return (
@@ -11,40 +12,51 @@ const Social = () => {
 
         <div className="flex w-full justify-center flex-wrap mr-2 items-center bg-[#1c0230] rounded-[1.7rem] p-4 ">
           <h1 className="text-gray-400 mr-4">Say hello!</h1>
+          <Link to="/contact">
           <div className='flex flex-wrap items-center justify-center'>
 
             <h1 className="text-md text-white sm:text-[12px] md:text-[24px] lg:text-lg font-semibold">virajkoradia1313@gmail.com</h1>
             <HiArrowRight className=" ml-2 w-6 h-6 text-white" />
           </div>
+          </Link>
 
+          <Link to="https://github.com/viraj0075">
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 30 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="p-8 bg-[#1c0230] rounded-lg">
-            <FaTwitter className="text-blue-500 w-8 h-8" />
+            <FaGithub className="text-blue-500 w-8 h-8" />
           </motion.div>
+          </Link>
+          <Link to="https://www.linkedin.com/in/viraj-koradia/">
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="p-8 bg-[#1c0230] rounded-lg">
-            <FaInstagram className="text-pink-500 w-8  h-8" />
+            <FaLinkedin className="text-purple-500 w-8 h-8" />
           </motion.div>
+          </Link>
+          <Link to="https://www.instagram.com/viraj.koradia/">
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="p-8 bg-[#1c0230] rounded-lg">
-            <FaLinkedin className="text-pink-400 w-8 h-8" />
+            <FaInstagram className="text-pink-500 w-8 h-8" />
           </motion.div>
+          </Link>
+          <Link to="https://virajkoradia.medium.com/">
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 60 }}
+            initial={{ opacity: 0, y: 30 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="p-8 bg-[#1c0230] rounded-lg">
-            <FaGithub className="text-blue-400 w-8  h-8" />
+            <FaMedium className="text-yellow-500 w-8 h-8" />
           </motion.div>
+          </Link>
+        
         </div>
 
       </div>

@@ -41,9 +41,9 @@ const Home = () => {
                                 <br />
                                 <motion.span
                                     variants={itemVar}
-                                    className='text-5xl sm:text-3xl md:text-4xl lg:text-6xl font-sora font-extrabold pt-2 gradient-text animate-gradient'
+                                    className='text-6xl sm:text-3xl md:text-4xl lg:text-6xl font-sora font-extrabold mt-8 pt-2 gradient-text animate-gradient'
                                 >
-                                    Viraj Koradia,
+                                    Viraj Koradia
                                 </motion.span>
                                 <br />
                                 <motion.span
@@ -158,7 +158,7 @@ const Home = () => {
                         </motion.div>
 
                         <motion.div variants={containerVar} className="flex  p-4 mt-[2rem] bg-[#1c0230] rounded-[2rem] shadow-lg">
-                            <div className="text-white font-extralight  text-xl lg:text-3xl md:w-[600px] lg:w-[700px]">
+                            <div className="text-white font-sans font-thin  text-xl lg:text-3xl md:w-[600px] lg:w-[700px]">
                                 ⚡   I'm a skilled software developer with experience in
                                 JavaScript and TypeScript, and expertise in frameworks like React, Express.js, Mongo Js and Node Js. <br />
                                 ⚡  I'm a quick learner and collaborate closely with teams to
@@ -174,7 +174,7 @@ const Home = () => {
                     </div>
                     <div>
                         <motion.div variants={imageVar} className='lg:'>
-                            <img className='w-[400px] h-[300px] sm:w-[400px] sm:h-[350px] lg:w-[450px] lg:h-[400px] border-b-orange-500 rounded-[4rem] object-cover bg-center' src={"/Viraj (1).jpg"} alt="" />
+                            <img className='w-[400px] h-[300px] sm:w-[400px] sm:h-[350px] lg:w-[450px] lg:h-[400px] border-b-orange-500 rounded-[4rem] object-cover bg-center' src={"/Viraj.jpg"} alt="" />
                         </motion.div>
                     </div>
                 </div>
@@ -289,6 +289,19 @@ const Home = () => {
                     </div>
                 </div>
 
+                <motion.div whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 30 }}
+                    transition={{ duration: 1.8, ease: "easeOut" }} 
+                    className='mt-[4rem] text-center flex justify-center items-center container mx-auto'>
+                    <Link to="/projectlist">
+                    <div className='flex items-center flex-wrap justify-center'>
+
+                        <button className='text-white bg-purple-500  p-3 rounded-md text-xl mt-4 lg:text-3xl sm:text-[1rem] md:text-[2rem] text-sora font-bold'>See More Projects
+                        </button>
+                        <img className="w-[60px] mt-4" src="/gifs/see.gif" alt="" />
+                    </div>
+                    </Link>
+                </motion.div>
 
                 <div className='mt-[4rem] container mx-auto'>
                     <motion.div

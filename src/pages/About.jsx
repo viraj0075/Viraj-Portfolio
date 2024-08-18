@@ -29,7 +29,6 @@ const About = () => {
                         transition={{ duration: 1.2, ease: "easeOut" }} className='text-xl mx-3 text-gray-400 sm:text-2xl md:text-2xl lg:text-2xl font-mono font-sm mt-2'>
                         I’m a Software Developer from India <br />🇮🇪 with a passion for Code and Building Software.
                     </motion.h1>
-                    <img className="w-[60px]" src="/gifs/snow.gif" alt="" />
                     <motion.h1
                         whileInView={{ opacity: 1, x: 0 }}
                         initial={{ opacity: 0, x: 100 }}
@@ -40,8 +39,6 @@ const About = () => {
                         ⚡I have a strong background in building dynamic web applications, <br />with a focus on performance optimization and responsive design. <br />My passion for coding drives me to continuously explore new <br />technologies and improve my skill set. Whether it's developing <br /> an intuitive front-end interface or crafting a robust back-end <br /> infrastructure, I strive to deliver high-quality, maintainable <br />code.<br />
 
                     </motion.h1>
-                    <img className="w-[60px]" src="/gifs/snow.gif" alt="" />
-
                     <motion.h1
                         whileInView={{ opacity: 1, x: 0 }}
                         initial={{ opacity: 0, x: 100 }}
@@ -58,18 +55,18 @@ const About = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         initial={{ opacity: 0, x: 80 }}
                         transition={{ duration: 1.2, ease: "easeOut" }}
-                        className="mr-4 mt-4 rounded-lg w-full md:w-[350px] h-[350px]  object-cover" src={"/city1.jpg"}
+                        className="mr-4 mt-4 rounded-lg w-full md:w-[350px] h-[350px]  object-cover" src={"/about/photo-1.jpg"}
                         alt="" />
                     <motion.img
                         whileInView={{ opacity: 1, x: 0 }}
                         initial={{ opacity: 0, x: 90 }}
                         transition={{ duration: 1.6, ease: "easeOut" }}
-                        className="mr-4 mt-4 rounded-lg w-full md:w-[350px] h-[350px]  object-cover" src={"/city2.jpg"} alt="" />
+                        className="mr-4 mt-4 rounded-lg w-full md:w-[350px] h-[350px]  object-cover" src={"/about/photo-2.jpg"} alt="" />
                     <motion.img
                         whileInView={{ opacity: 1, x: 0 }}
                         initial={{ opacity: 0, x: 100 }}
                         transition={{ duration: 1.8, ease: "easeOut" }}
-                        className="mr-4 mt-4 rounded-lg w-full md:w-[350px] h-[350px]  object-cover" src={"/city3.jpg"} alt="" />
+                        className="mr-4 mt-4 rounded-lg w-full md:w-[350px] h-[350px]  object-cover" src={"/about/photo-3.jpg"} alt="" />
 
                 </div>
                 <motion.div whileInView={{ opacity: 1, x: 0 }}
@@ -89,7 +86,7 @@ const About = () => {
                     <motion.div whileInView={{ opacity: 1, x: 0 }}
                         initial={{ opacity: 0, x: 100 }}
                         transition={{ duration: 1.2, ease: "easeOut" }} className="lg:p-8 p-4 mr-2 mt-[2rem] bg-[#1c0230] w-full md:w-[280px] rounded-[2rem] shadow-lg">
-                        <img className='object-cover w-[150px] sm:w-full rounded h-[50px]' src="/city2.jpg" alt="" />
+                        <img className=' object-contain w-[70px] h-[70px] sm:w-full rounded' src="/gifs/notes.gif" alt="" />
                         <h1 className='text-white text-3xl  mt-8 mb-8  text-sora font-small'>
                             Requirements
                         </h1>
@@ -98,7 +95,7 @@ const About = () => {
                     <motion.div whileInView={{ opacity: 1, x: 0 }}
                         initial={{ opacity: 0, x: 100 }}
                         transition={{ duration: 1.2, ease: "easeOut" }} className="lg:p-8 p-4 mr-2 mt-[2rem] bg-[#1c0230] w-full md:w-[280px] rounded-[2rem] shadow-lg">
-                        <img className='object-cover w-[150px] sm:w-full rounded h-[50px]' src="/city2.jpg" alt="" />
+                        <img className=' object-contain w-[70px] h-[70px] sm:w-full rounded' src="/gifs/design.gif" alt="" />
                         <h1 className='text-white text-3xl  mt-8 mb-8  text-sora font-small'>
                             Design
                         </h1>
@@ -107,7 +104,7 @@ const About = () => {
                     <motion.div whileInView={{ opacity: 1, x: 0 }}
                         initial={{ opacity: 0, x: 100 }}
                         transition={{ duration: 1.2, ease: "easeOut" }} className="lg:p-8 p-4 mr-2 mt-[2rem] bg-[#1c0230] w-full md:w-[280px] rounded-[2rem] shadow-lg">
-                        <img className='object-cover w-[150px] sm:w-full rounded h-[50px]' src="/city2.jpg" alt="" />
+                        <img className=' object-contain w-[70px] h-[70px] sm:w-full rounded' src="/gifs/develop.gif" alt="" />
                         <h1 className='text-white text-3xl  mt-8 mb-8  text-sora font-small'>
                             Development
                         </h1>
@@ -116,7 +113,7 @@ const About = () => {
                     <motion.div whileInView={{ opacity: 1, x: 0 }}
                         initial={{ opacity: 0, x: 100 }}
                         transition={{ duration: 1.2, ease: "easeOut" }} className="lg:p-8 p-4 mr-2 mt-[2rem] bg-[#1c0230] w-full md:w-[280px] rounded-[2rem] shadow-lg">
-                        <img className='object-cover w-[150px] sm:w-full rounded h-[50px]' src="/city2.jpg" alt="" />
+                        <img className=' object-contain w-[70px] h-[70px] sm:w-full rounded' src="/gifs/rocket.gif" alt="" />
                         <h1 className='text-white text-3xl  mt-8 mb-8  text-sora font-small'>
                             Deployment
                         </h1>
