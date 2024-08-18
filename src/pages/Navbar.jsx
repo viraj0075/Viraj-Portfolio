@@ -7,7 +7,7 @@ const Navbar = () => {
   <nav className="fixed w-full z-10 top-0   border-gray-200 left-0 right-0 mb-3 p-4 px-6 sm:px-8 py-2.5  backdrop-blur-xl bg-[#0f0c29]/60">
       <div className="container flex flex-wrap justify-between items-center mx-auto  lg:px-24">
         <a href="/" className="flex items-center">
-          <span className="self-center text-white font-extrabold whitespace-nowrap text-2xl dark:text-white ml-4 ">VIRAJ</span>
+          <span className="self-center  font-extrabold whitespace-nowrap text-2xl text-purple-200 ml-4 ">VIRAJ</span>
         </a>
         <button
           type="button"

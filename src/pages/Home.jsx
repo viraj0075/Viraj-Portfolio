@@ -7,6 +7,7 @@ import Experience from '../components/Experience';
 import { motion } from 'framer-motion';
 import { containerVar, emoji, imageVar, itemVar } from '../components/Animations';
 import '../../src/index.css'
+import { projectData } from '../utils/Projects/ProjectjsData';
 
 const Home = () => {
     return (
@@ -200,19 +201,28 @@ const Home = () => {
                         </motion.span>
                     </motion.div>
                     <motion.div
-                        initial="hidden"
-                        animate="show"
-                        variants={containerVar}
-                        className='flex flex-row flex-wrap items-center justify-center bg-[#0f0c29]  p-4 overflow-hidden'>
+                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, y: 70 }}
+                        transition={{ duration: 1.2, ease: "easeOut" }}
+                        className='flex flex-row flex-wrap items-center justify-center bg-[#0f0c29] p-4 overflow-hidden'
+                    >
                         <Marquee autoFill velocity={25} minScale={0.7} resetAfterTries={200} scatterRandomly>
                             {skills.map((items) => (
-                                <div className='flex-col items-center justify-center flex overflow-hidden m-2  object-cover' key={items.id}>
-                                    <div>
-
-                                        <img src={items.imageUrl} className="w-[300px] h-[250px] sm:w-[150px] lg:w-[300px]  pl-[2rem] bg-[#0f0c29] object-contain" alt={items.name} />
-                                        <h1 className='text-white text-center font-sora text-2xl font-bold mt-[2rem]'>
-                                            {items.skillname}
-                                        </h1>
+                                <div
+                                    className='flex-col items-center justify-center flex overflow-hidden m-4 object-cover transform hover:scale-110 transition-transform duration-300'
+                                    key={items.id}
+                                >
+                                    <div className="relative rounded-lg shadow-lg overflow-hidden bg-gradient-to-r from-purple-400 via-purple-500  to-purple-600 p-2">
+                                        <div className="bg-[#0f0c29] rounded-lg p-4">
+                                            <img
+                                                src={items.imageUrl}
+                                                className="w-[250px] h-[200px] sm:w-[150px] lg:w-[250px] bg-[#0f0c29] object-contain rounded-t-lg"
+                                                alt={items.name}
+                                            />
+                                            <h1 className='text-white text-center font-sora text-2xl font-bold mt-4'>
+                                                {items.skillname}
+                                            </h1>
+                                        </div>
                                     </div>
                                 </div>
                             ))}
@@ -228,34 +238,34 @@ const Home = () => {
                         transition={{ duration: 1.2, ease: "easeOut" }}
                         className='flex items-center flex-wrap mx-2'>
                         <h1 className='text-white text-2xl mt-8 lg:text-6xl sm:text-[1rem] md:text-[2rem] text-sora ml-3 font-bold'>
-                            Recent Projects
+                            Projects
                         </h1>
                         <motion.span whileInView={{ opacity: 1, x: 0 }}
                             initial={{ opacity: 0, x: 30 }}
                             transition={{ duration: 1.2, ease: "easeOut" }}
                             className='text-4xl mt-8 '>
-                                                <img className="w-[60px]" src="/gifs/light.gif" alt="" />
+                            <img className="w-[60px]" src="/gifs/light.gif" alt="" />
 
                         </motion.span>
                     </motion.div>
                     <div className='bg-[#0f0c29] mt-[2rem]  p-4 overflow-hidden'>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            {WorkData.map((work) => (work.id <= 4 && (
+                            {projectData.map((work) => (work.id <= 4 && (
                                 <motion.div
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    initial={{ opacity: 0, y: 300 }}
+                                    initial={{ opacity: 0, y: 100 }}
                                     transition={{ duration: 1.8, ease: "easeOut" }}
                                     key={work.id}
                                     className="relative bg-[#1c0230] p-4 rounded-lg overflow-hidden"
                                 >
                                     <img
-                                        src={work.imageUrl}
-                                        alt={work.title}
+                                        src={work?.photo?.image1}
+                                        alt={work.heading}
                                         className="w-full h-[15rem] md:h-[25rem] lg:h-[25rem] object-cover rounded-lg"
 
                                     />
-                                    <h3 className="text-white text-2xl lg:text-3xl sm:text-[1rem] md:text-[2rem] text-sora mt-2 font-bold">{work.title}</h3>
-                                    <p className="text-gray-300 text-2xl font-mono">{work.category}</p>
+                                    <h3 className="text-purple-400 text-2xl lg:text-3xl sm:text-[1rem] md:text-[2rem] text-sora mt-2 font-bold">{work?.heading}</h3>
+                                    <p className="text-gray-300 text-2xl font-sora">{work.tags.tag1}</p>
                                     <div className="absolute top-4 right-4 blinking-2 text-purple-400">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -299,7 +309,7 @@ const Home = () => {
                             transition={{ duration: 1.2, ease: "easeOut" }}
 
                             className='text-4xl mt-8 '>
-                                                <img className="w-[60px]" src="/gifs/exp.gif" alt="" />
+                            <img className="w-[60px]" src="/gifs/exp.gif" alt="" />
 
                         </motion.span>
                     </motion.div>
@@ -319,7 +329,7 @@ const Home = () => {
                             initial={{ opacity: 0, x: 30 }}
                             transition={{ duration: 1.2, ease: "easeOut" }}
                             className='text-4xl mt-8 '>
-                                                <img className="w-[60px]" src="/gifs/shame.gif" alt="" />
+                            <img className="w-[60px]" src="/gifs/shame.gif" alt="" />
 
                         </motion.span>
                     </motion.div>

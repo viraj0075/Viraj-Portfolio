@@ -26,7 +26,7 @@ const Projects = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             initial={{ opacity: 0, y: 30 }}
                             transition={{ duration: 1.2, ease: "easeOut" }}>
-                            <h1 className='text-white text-center text-2xl mt-8 lg:text-6xl sm:text-2xl md:text-3xl text-sora ml-3 font-bold'>{items.heading}</h1>
+                            <h1 className='text-purple-400 text-center text-2xl mt-8 lg:text-6xl sm:text-2xl md:text-3xl text-sora ml-3 font-bold'>{items.heading}</h1>
                         </motion.div>
                         <motion.div className='flex flex-wrap items-center justify-center mt-5'>
                             <div
@@ -45,9 +45,9 @@ const Projects = () => {
                             </div>
                         </motion.div>
                         <motion.div
-                        whileInView={{ opacity: 1, y: 0 }}
-                        initial={{ opacity: 0, y: 30 }}
-                        transition={{ duration: 1.2, ease: "easeOut" }} className='mt-8'>
+                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 30 }}
+                            transition={{ duration: 1.2, ease: "easeOut" }} className='mt-8'>
                             <img className="rounded-[2rem] h-[450px] sm:[200px] md:h-[500px] lg:h-[600px] object-cover " src={items?.photo?.image1} />
                         </motion.div>
                         <div>
@@ -60,9 +60,14 @@ const Projects = () => {
                                 <motion.div
                                     whileInView={{ opacity: 1, y: 0 }}
                                     initial={{ opacity: 0, y: 30 }}
-                                    transition={{ duration: 1.2, ease: "easeOut" }} className="flex items-center mx-2 lg:mx-[5rem]  mt-[2rem]  rounded-[2rem] shadow-lg">
-                                    <span className="text-gray-400 text-xl lg:text-2xl">{items?.description}
-                                    </span>
+                                    transition={{ duration: 1.2, ease: "easeOut" }} className="flex flex-col items-center mx-2 lg:mx-[5rem]  mt-[2rem]  rounded-[2rem] shadow-lg">
+                                    {
+                                        items?.description.map(items => (
+                                            <span className="text-gray-400 text-xl mt-3 lg:text-2xl">{[items]}
+                                            </span>
+                                        ))
+
+                                    }
                                 </motion.div>
                             </div>
 
@@ -77,7 +82,7 @@ const Projects = () => {
                         </div>
                         <div>
                             <div>
-                                <motion.h1 
+                                <motion.h1
                                     whileInView={{ opacity: 1, y: 0 }}
                                     initial={{ opacity: 0, y: 30 }}
                                     transition={{ duration: 1.2, ease: "easeOut" }} className='text-white text-2xl mt-8 lg:text-4xl sm:text-2xl md:text-3xl text-sora ml-2 lg:mx-[5rem] font-bold font-sora'>Conclusion</motion.h1>
