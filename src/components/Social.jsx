@@ -36,7 +36,7 @@ const Social = () => {
             initial={{ opacity: 0, y: 50 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="p-8 bg-[#1c0230] rounded-lg">
-            <FaLinkedin className="text-pink-400 w-8   h-8" />
+            <FaLinkedin className="text-pink-400 w-8 h-8" />
           </motion.div>
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}

@@ -44,7 +44,7 @@ const Experience = () => {
                 <div className="text-base sm:text-lg">
                   <span>{item.period}</span>
                 </div>
-                <div className="text-base sm:text-lg font-semibold flex-grow">
+                <div className="text-base sm:text-lg text-purple-400 font-semibold flex-grow">
                   <span>{item.company}</span>
                 </div>
               </div>

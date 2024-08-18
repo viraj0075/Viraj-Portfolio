@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { containerVar } from '../components/Animations';
-import { useState } from 'react';
 import { sendEmail } from '../components/Email';
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -13,35 +13,39 @@ const ContactForm = () => {
   const [success, setSuccess] = useState(null);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
-  const handleSubmit = async (e) => {
+
+  const handleSubmit = (e) => {
     e.preventDefault();
     setIsSending(true);
-    try {
-      await sendEmail(formData);
-      setSuccess(true);
-      if (success === true) {
-        setIsSending({
-          name: '',
-          email: '',
-          message: ''
-        })
-      }
-    } catch (error) {
-      setSuccess(false);
-      console.error('Error sending email:', error);
-    } finally {
-      setIsSending(false);
-    }
+
+    sendEmail(formData)
+      .then(data => {
+        if (!data.ok) {
+          setSuccess(false);
+          throw new Error('Error in Sending Data');
+        } else {
+          setSuccess(true);
+          setFormData({
+            name: '',
+            email: '',
+            message: ''
+          });
+        }
+      })
+      .finally(() => {
+        setIsSending(false);
+      });
   };
+
   return (
     <motion.div variants={containerVar} initial="hidden" animate="show" className="mt-20 min-h-screen bg-[#0f0c29] flex items-center justify-center p-5">
       <div className="w-full max-w-2xl mx-auto">
         <div className='flex justify-center'>
-        <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 text-center font-sora">Contact.</h1>
-        <img className="w-[60px] h-[60px]" src="/gifs/yo.gif" alt="" />
-
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 text-center font-sora">Contact.</h1>
+          <img className="w-[60px] h-[60px]" src="/gifs/yo.gif" alt="Contact Gif" />
         </div>
         <p className="text-gray-400 text-center font-sora mb-4 text-xl lg:text-2xl">Get in touch if you would like to work together.</p>
         <p className="text-gray-400 text-center font-sora mb-8 text-xl lg:text-2xl">Thanks for stopping by.</p>
@@ -86,7 +90,6 @@ const ContactForm = () => {
           {success === true && <p className="text-green-500">Message sent successfully!</p>}
           {success === false && <p className="text-red-500">Failed to send message. Please try again.</p>}
         </form>
-
       </div>
     </motion.div>
   );

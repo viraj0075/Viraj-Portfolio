@@ -22,7 +22,7 @@ const ProjectList = () => {
                 </motion.div>
                 <div className='bg-[#0f0c29] mt-[2rem] overflow-hidden'>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {projectData.map((items) => (items.id <= 4 && (
+                        {projectData.map((items) => ((
                             <motion.div 
                                 variants={containerVar}
                                 key={items.id}
@@ -34,7 +34,7 @@ const ProjectList = () => {
                                         alt={items.heading}
                                         className="w-full h-[25rem] object-cover rounded-lg"
                                     />
-                                    <h3 className="text-3xl text-white font-sora font-bold mt-4">{items.heading}</h3>
+                                    <h3 className="text-3xl text-purple-300 font-sora font-bold mt-4">{items.heading}</h3>
                                 </Link>
                                 <p className="text-gray-300 text-2xl font-mono">{items.tags.tag1}</p>
                                 <div className="absolute top-4 right-4 blinking-2 text-green-400">
@@ -45,7 +45,7 @@ const ProjectList = () => {
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
-                                            className="w-12 h-12 text-green-500 bg-[#1c0230] transition-transform duration-300 transform hover:scale-125"
+                                            className="w-12 h-12 text-purple-500 bg-[#1c0230] transition-transform duration-300 transform hover:scale-125"
                                         >
                                             <path
                                                 className="transition-all duration-300"

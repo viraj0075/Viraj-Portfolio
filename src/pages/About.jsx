@@ -137,14 +137,26 @@ const About = () => {
 
                         </span>
                     </motion.div>
-                    <div className='flex flex-row flex-wrap items-center justify-center bg-[#0f0c29] p-1 lg:p-4 overflow-hidden'>
+                    <div
+                    className='flex flex-row flex-wrap items-center justify-center bg-[#0f0c29] p-1 lg:p-4 overflow-hidden'>
                         <Marquee autoFill velocity={25} minScale={0.7} resetAfterTries={200} scatterRandomly>
                             {skills.map((items) => (
-                                <div className='w-[300px] flex-col items-center justify-center flex overflow-hidden m-2' key={items.id}>
-                                    <img src={items.imageUrl} className="w-[300px] h-[300px]  pl-[2rem]" alt={items.name} />
-                                    <h1 className='text-white text-center font-sora text-2xl font-bold mt-[2rem]'>
-                                        {items.skillname}
-                                    </h1>
+                                <div
+                                    className='flex-col items-center justify-center flex overflow-hidden m-4 object-cover transform hover:scale-110 transition-transform duration-300'
+                                    key={items.id}
+                                >
+                                    <div className="relative rounded-lg shadow-lg overflow-hidden bg-gradient-to-r from-purple-400 via-purple-500  to-purple-600 p-2">
+                                        <div className="bg-[#0f0c29] rounded-lg p-4">
+                                            <img
+                                                src={items.imageUrl}
+                                                className="w-[250px] h-[200px] sm:w-[150px] lg:w-[250px] bg-[#0f0c29] object-contain rounded-t-lg"
+                                                alt={items.name}
+                                            />
+                                            <h1 className='text-white text-center font-sora text-2xl font-bold mt-4'>
+                                                {items.skillname}
+                                            </h1>
+                                        </div>
+                                    </div>
                                 </div>
                             ))}
                         </Marquee>
