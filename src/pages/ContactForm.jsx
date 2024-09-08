@@ -65,7 +65,7 @@ const ContactForm = () => {
               className="w-full sm:w-1/2 p-3 bg-gray-800 text-white rounded focus:outline-none focus:ring-2 focus:ring-yellow-500"
             />
             <input
-              placeholder="Email"
+              placeholder="Enter your Email"
               type="email"
               id="email"
               name="email"

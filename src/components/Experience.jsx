@@ -21,7 +21,7 @@ const Experience = () => {
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: 30 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
-              className="flex ml-2 flex-col md:flex-row items-start md:items-start justify-start p-4 flex-wrap bg-[#1c0230] rounded-lg cursor-pointer"
+              className="flex flex-col md:flex-row items-start md:items-start justify-start p-4 flex-wrap bg-[#1c0230] rounded-lg cursor-pointer"
               onClick={() => toggleAccordion(index)}
             >
               <div className="flex items-start space-x-2 sm:space-x-4 w-full flex-wrap">
