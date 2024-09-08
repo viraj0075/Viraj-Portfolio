@@ -27,7 +27,7 @@ const About = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         initial={{ opacity: 0, x: 100 }}
                         transition={{ duration: 1.2, ease: "easeOut" }} className='text-xl mx-3 text-gray-400 sm:text-2xl md:text-2xl lg:text-2xl font-mono font-sm mt-2'>
-                        I’m a Software Developer from India <br />🇮🇪 with a passion for Code and Building Software.
+                        I’m a Software Developer from India <br /> with a passion for Code and Building Software.
                     </motion.h1>
                     <motion.h1
                         whileInView={{ opacity: 1, x: 0 }}

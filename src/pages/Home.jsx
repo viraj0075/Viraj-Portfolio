@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { containerVar, emoji, imageVar, itemVar } from '../components/Animations';
 import '../../src/index.css'
 import { projectData } from '../utils/Projects/ProjectjsData';
+import Blog from '../components/Blog';
 
 const Home = () => {
     return (
@@ -132,7 +133,7 @@ const Home = () => {
                 initial="hidden"
                 animate="show"
                 variants={containerVar}
-                className='mx-8 sm:mx-2 md:mx-10 mt-20 lg:mx-32 flex items-center justify-center flex-wrap'>
+                className='mx-4 sm:mx-2 md:mx-10 mt-20 lg:mx-32 flex items-center justify-center flex-wrap'>
                 <div className='container mx-auto flex flex-wrap justify-between items-center'>
                     <div className='flex flex-wrap flex-col justify-between'>
                         <motion.div
@@ -179,7 +180,7 @@ const Home = () => {
                     </div>
                 </div>
             </motion.div>
-            <div className='mx-8 sm:mx-2 md:mx-10 mt-20 lg:mx-32 '>
+            <div className='mx-4 sm:mx-2 md:mx-10 mt-20 lg:mx-32 '>
                 <div className='mt-[4rem] m-8 container mx-auto mb-[4rem]'>
                     <motion.div
                         initial="hidden"
@@ -206,7 +207,7 @@ const Home = () => {
                         transition={{ duration: 1.2, ease: "easeOut" }}
                         className='flex flex-row flex-wrap items-center justify-center bg-[#0f0c29] p-4 overflow-hidden'
                     >
-                        <Marquee autoFill velocity={25} minScale={0.7} resetAfterTries={200} scatterRandomly>
+                        <Marquee autoFill velocity={50} minScale={0.7} resetAfterTries={200} scatterRandomly>
                             {skills.map((items) => (
                                 <div
                                     className='flex-col items-center justify-center flex overflow-hidden m-4 object-cover transform hover:scale-110 transition-transform duration-300'
@@ -230,14 +231,14 @@ const Home = () => {
                     </motion.div>
                 </div>
             </div>
-            <div className='mx-8 sm:mx-2 md:mx-10 mt-20 lg:mx-32 '>
+            <div className='mx-4 sm:mx-2 md:mx-10 mt-20 lg:mx-32 '>
                 <div className='mt-[4rem] container mx-auto'>
                     <motion.div
                         whileInView={{ opacity: 1, y: 0 }}
                         initial={{ opacity: 0, y: 100 }}
                         transition={{ duration: 1.2, ease: "easeOut" }}
                         className='flex items-center flex-wrap mx-2'>
-                        <h1 className='text-white text-2xl mt-8 lg:text-6xl sm:text-[1rem] md:text-[2rem] text-sora ml-3 font-bold'>
+                        <h1 className='text-white text-2xl mt-8 lg:text-6xl sm:text-[1rem] md:text-[2rem] text-sora font-bold'>
                             Projects
                         </h1>
                         <motion.span whileInView={{ opacity: 1, x: 0 }}
@@ -248,42 +249,44 @@ const Home = () => {
 
                         </motion.span>
                     </motion.div>
-                    <div className='bg-[#0f0c29] mt-[2rem]  p-4 overflow-hidden'>
+                    <div className='bg-[#0f0c29] mt-[2rem]  p-2x overflow-hidden'>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {projectData.map((work) => (work.id <= 4 && (
-                                <motion.div
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    initial={{ opacity: 0, y: 100 }}
-                                    transition={{ duration: 1.8, ease: "easeOut" }}
-                                    key={work.id}
-                                    className="relative bg-[#1c0230] p-4 rounded-lg overflow-hidden"
-                                >
-                                    <img
-                                        src={work?.photo?.image1}
-                                        alt={work.heading}
-                                        className="w-full h-[15rem] md:h-[25rem] lg:h-[25rem] object-cover rounded-lg"
+                                <Link to={`/project/${work.id}`}>
+                                    <motion.div
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        initial={{ opacity: 0, y: 100 }}
+                                        transition={{ duration: 1.8, ease: "easeOut" }}
+                                        key={work.id}
+                                        className="relative bg-[#1c0230] p-4 rounded-lg overflow-hidden"
+                                    >
+                                        <img
+                                            src={work?.photo?.image1}
+                                            alt={work.heading}
+                                            className="w-full h-[15rem] md:h-[25rem] lg:h-[25rem] object-cover rounded-lg"
 
-                                    />
-                                    <h3 className="text-purple-400 text-2xl lg:text-3xl sm:text-[1rem] md:text-[2rem] text-sora mt-2 font-bold">{work?.heading}</h3>
-                                    <p className="text-gray-300 text-2xl font-sora">{work.tags.tag1}</p>
-                                    <div className="absolute top-4 right-4 blinking-2 text-purple-400">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            className="w-12 h-12 text-purple-500 bg-[#1c0230] transition-transform duration-300 transform hover:scale-125"
-                                        >
-                                            <path
-                                                className="transition-all duration-300"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth="2"
-                                                d="M13 7c1.5 1.5 3 3 5 5m0 0c-1.5-1.5-3-3-5-5m5 5H6"
-                                            />
-                                        </svg>
-                                    </div>
-                                </motion.div>
+                                        />
+                                        <h3 className="text-purple-400 text-2xl lg:text-3xl sm:text-[1rem] md:text-[2rem] text-sora mt-2 font-bold">{work?.heading}</h3>
+                                        <p className="text-gray-300 text-2xl font-sora">{work.tags.tag1}</p>
+                                        <div className="absolute top-4 right-4 blinking-2 text-purple-400">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                                className="w-12 h-12 text-purple-500 bg-[#1c0230] transition-transform duration-300 transform hover:scale-125"
+                                            >
+                                                <path
+                                                    className="transition-all duration-300"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    strokeWidth="2"
+                                                    d="M13 7c1.5 1.5 3 3 5 5m0 0c-1.5-1.5-3-3-5-5m5 5H6"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </motion.div>
+                                </Link>
                             )))}
                         </div>
                     </div>
@@ -291,15 +294,15 @@ const Home = () => {
 
                 <motion.div whileInView={{ opacity: 1, y: 0 }}
                     initial={{ opacity: 0, y: 30 }}
-                    transition={{ duration: 1.8, ease: "easeOut" }} 
+                    transition={{ duration: 1.8, ease: "easeOut" }}
                     className='mt-[4rem] text-center flex justify-center items-center container mx-auto'>
                     <Link to="/projectlist">
-                    <div className='flex items-center flex-wrap justify-center'>
+                        <div className='flex items-center flex-wrap justify-center'>
 
-                        <button className='text-white bg-purple-500  p-3 rounded-md text-xl mt-4 lg:text-3xl sm:text-[1rem] md:text-[2rem] text-sora font-bold'>See More Projects
-                        </button>
-                        <img className="w-[60px] mt-4" src="/gifs/see.gif" alt="" />
-                    </div>
+                            <button className='text-white bg-purple-500  p-3 rounded-md text-xl mt-4 lg:text-3xl sm:text-[1rem] md:text-[2rem] text-sora font-bold'>See More Projects
+                            </button>
+                            <img className="w-[60px] mt-4" src="/gifs/see.gif" alt="" />
+                        </div>
                     </Link>
                 </motion.div>
 
@@ -330,6 +333,69 @@ const Home = () => {
                         <Experience />
                     </div>
                 </div>
+
+                <div className='mt-[4rem] container mx-auto'>
+                    <motion.div
+                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, y: 100 }}
+                        transition={{ duration: 1.2, ease: "easeOut" }}
+                        className='flex items-center flex-wrap mx-2'>
+                        <h1 className='text-white text-2xl mt-8 lg:text-6xl sm:text-[1rem] md:text-[2rem] text-sora font-bold'>
+                            Projects
+                        </h1>
+                        <motion.span whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, x: 30 }}
+                            transition={{ duration: 1.2, ease: "easeOut" }}
+                            className='text-4xl mt-8 '>
+                            <img className="w-[60px]" src="/gifs/light.gif" alt="" />
+
+                        </motion.span>
+                    </motion.div>
+                    <div className='bg-[#0f0c29] mt-[2rem]  p-2x overflow-hidden'>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            {projectData.map((work) => (work.id <= 4 && (
+                                <Link to={`/project/${work.id}`}>
+                                    <motion.div
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        initial={{ opacity: 0, y: 100 }}
+                                        transition={{ duration: 1.8, ease: "easeOut" }}
+                                        key={work.id}
+                                        className="relative bg-[#1c0230] p-4 rounded-lg overflow-hidden"
+                                    >
+                                        <img
+                                            src={work?.photo?.image1}
+                                            alt={work.heading}
+                                            className="w-full h-[15rem] md:h-[25rem] lg:h-[25rem] object-cover rounded-lg"
+
+                                        />
+                                        <h3 className="text-purple-400 text-2xl lg:text-3xl sm:text-[1rem] md:text-[2rem] text-sora mt-2 font-bold">{work?.heading}</h3>
+                                        <p className="text-gray-300 text-2xl font-sora">{work.tags.tag1}</p>
+                                        <div className="absolute top-4 right-4 blinking-2 text-purple-400">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                                className="w-12 h-12 text-purple-500 bg-[#1c0230] transition-transform duration-300 transform hover:scale-125"
+                                            >
+                                                <path
+                                                    className="transition-all duration-300"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    strokeWidth="2"
+                                                    d="M13 7c1.5 1.5 3 3 5 5m0 0c-1.5-1.5-3-3-5-5m5 5H6"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </motion.div>
+                                </Link>
+                            )))}
+                        </div>
+                    </div>
+                </div>
+
+
+
                 <div className='mt-[4rem] container mx-auto'>
                     <motion.div initial="hidden"
                         animate="show" className='flex items-center flex-wrap mx-2'>
