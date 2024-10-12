@@ -2,13 +2,11 @@ import React from 'react'
 import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
 import { skills } from '../utils/skill/skillimages';
-import { WorkData } from '../utils/work/WorkData';
 import Experience from '../components/Experience';
 import { motion } from 'framer-motion';
 import { containerVar, emoji, imageVar, itemVar } from '../components/Animations';
 import '../../src/index.css'
 import { projectData } from '../utils/Projects/ProjectjsData';
-import Blog from '../components/Blog';
 
 const Home = () => {
     return (
@@ -99,8 +97,9 @@ const Home = () => {
 
                 </div>
             </motion.div >
-            <div className="mt-[8rem]">
-                <Marquee direction="left" pauseOnHover className="text-white text-9xl text-sora font-bold overflow-hidden">
+            <div className="mt-[8rem]" initial="hidden"
+                animate="show" variants={containerVar}>
+                <Marquee  direction="left" pauseOnHover className="text-white text-9xl text-sora font-bold overflow-hidden">
                     <div className='flex items-center'>
                         <span className="w-3 h-3 bg-purple-500 rounded-full mx-2"></span>
 

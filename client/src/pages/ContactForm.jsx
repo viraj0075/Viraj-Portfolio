@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { containerVar } from '../components/Animations';
-import { sendEmail } from '../components/Email';
+import { sendEmail } from '../components/Email'; // Import the sendEmail function
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
   });
   const [isSending, setIsSending] = useState(false);
   const [success, setSuccess] = useState(null);
+  const [error, setError] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,33 +21,30 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSending(true);
+    setError(null); 
 
     try {
-      const data = await sendEmail(formData);
-      console.log(data)
+      const data = await sendEmail(formData); 
 
-      if (!data.text) {
-        setSuccess(false);
-        throw new Error('Error in sending data');
-      } else {
-        setSuccess(true);
-        setFormData({
-          name: '',
-          email: '',
-          message: '',
-        });
-      }
+      setSuccess(true);
+      setFormData({ name: '', email: '', message: '' }); 
     } catch (error) {
-      console.error(error.message);
+      setSuccess(false);
+      setError('Failed to send message. Please try again.'); 
     } finally {
       setIsSending(false);
     }
   };
 
   return (
-    <motion.div variants={containerVar} initial="hidden" animate="show" className="mt-20 min-h-screen bg-[#0f0c29] flex items-center justify-center p-5">
+    <motion.div
+      variants={containerVar}
+      initial="hidden"
+      animate="show"
+      className="mt-20 min-h-screen bg-[#0f0c29] flex items-center justify-center p-5"
+    >
       <div className="w-full max-w-2xl mx-auto">
-        <div className='flex justify-center'>
+        <div className="flex justify-center">
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 text-center font-sora">Contact.</h1>
           <img className="w-[60px] h-[60px]" src="/gifs/yo.gif" alt="Contact Gif" />
         </div>
@@ -87,11 +85,12 @@ const ContactForm = () => {
           <button
             type="submit"
             disabled={isSending}
-            className="w-full bg-white text-black py-3 rounded hover:bg-gray-200 transition duration-200">
+            className="w-full bg-white text-black py-3 rounded hover:bg-gray-200 transition duration-200"
+          >
             {isSending ? 'Sending...' : 'Send Message'}
           </button>
           {success === true && <p className="text-green-500">Message sent successfully!</p>}
-          {success === false && <p className="text-red-500">Failed to send message. Please try again.</p>}
+          {error && <p className="text-red-500">{error}</p>}
         </form>
       </div>
     </motion.div>
