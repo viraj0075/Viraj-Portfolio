@@ -1,7 +1,9 @@
+import toast, { Toaster } from 'react-hot-toast';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { containerVar } from '../components/Animations';
-import { sendEmail } from '../components/Email'; // Import the sendEmail function
+import { sendEmail } from '../components/Email';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -10,8 +12,6 @@ const ContactForm = () => {
     message: '',
   });
   const [isSending, setIsSending] = useState(false);
-  const [success, setSuccess] = useState(null);
-  const [error, setError] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,16 +21,13 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSending(true);
-    setError(null); 
 
     try {
-      const data = await sendEmail(formData); 
-
-      setSuccess(true);
-      setFormData({ name: '', email: '', message: '' }); 
+      await sendEmail(formData);
+      toast.success('Message sent successfully!', { position: 'top-right' });
+      setFormData({ name: '', email: '', message: '' });
     } catch (error) {
-      setSuccess(false);
-      setError('Failed to send message. Please try again.'); 
+      toast.error('Failed to send message. Please try again.', { position: 'top-right' });
     } finally {
       setIsSending(false);
     }
@@ -43,6 +40,7 @@ const ContactForm = () => {
       animate="show"
       className="mt-20 min-h-screen bg-[#0f0c29] flex items-center justify-center p-5"
     >
+     <Toaster/>
       <div className="w-full max-w-2xl mx-auto">
         <div className="flex justify-center">
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 text-center font-sora">Contact.</h1>
@@ -89,8 +87,6 @@ const ContactForm = () => {
           >
             {isSending ? 'Sending...' : 'Send Message'}
           </button>
-          {success === true && <p className="text-green-500">Message sent successfully!</p>}
-          {error && <p className="text-red-500">{error}</p>}
         </form>
       </div>
     </motion.div>

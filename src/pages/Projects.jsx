@@ -9,7 +9,6 @@ const Projects = () => {
     const { id } = useParams();
     const project = projectData.find(items => items.id === parseInt(id));
     const data = [{ ...project }]
-    console.log(project)
     return (
         <motion.div
             initial="hidden"

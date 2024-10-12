@@ -11,7 +11,6 @@ export const sendEmail = async (formData) => {
     });
 
     const data = await response.json();
-    console.log(response)
     if (!response.ok) {
       throw new Error(data.text || 'Error in sending email');
     }
